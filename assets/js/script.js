@@ -6,38 +6,36 @@ var finalArray = []
 var finalString = []
 
 
-
-
 function askUserForPasswordPreferences() {
   var passwordLength = window.prompt("Chose a number between 8 and 128");
   while (passwordLength <= 7 || passwordLength >= 129) {
     passwordLength = window.prompt("Chose a number between 8 and 128");
 
   }
-  console.log(passwordLength);
+  // console.log(passwordLength);
 
   var userSpecialCharacterConfirmation = confirm("Do you want to have a special character in your password?");
   if (userSpecialCharacterConfirmation == true) {
   }
-  console.log(userSpecialCharacterConfirmation);
+  // console.log(userSpecialCharacterConfirmation);
 
 
   var userNumericalCharacterConfirmation = confirm("Do you want to have a numerical character in your password?");
   if (userNumericalCharacterConfirmation == true) {
   }
-  console.log(userNumericalCharacterConfirmation);
+  // console.log(userNumericalCharacterConfirmation);
 
 
   var userUppercaseCharacterConfirmation = confirm("Do you want to have an uppercase character in your password?");
   if (userUppercaseCharacterConfirmation == true) {
   }
-  console.log(userUppercaseCharacterConfirmation);
+  // console.log(userUppercaseCharacterConfirmation);
 
 
   var userLowercaseCharacterConfirmation = confirm("Do you want to have a lowercase character in your password?");
   if (userLowercaseCharacterConfirmation == true) {
   }
-  console.log(userLowercaseCharacterConfirmation);
+  // console.log(userLowercaseCharacterConfirmation);
 
   var userSelection = {
     userlength: passwordLength,
@@ -74,7 +72,7 @@ function generatePassword() {
   if (userSelection.userLowercaseCharacters === true)
     finalArray = finalArray.concat(lowercaseCharacters)
 
-  console.log(finalArray)
+  // console.log(finalArray)
 
   for (var i = 0; i < parseInt(userSelection.userlength); i++) {
     finalString = finalString + finalArray[Math.floor(Math.random() * finalArray.length)]
