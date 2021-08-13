@@ -15,14 +15,19 @@ function askUserForPasswordPreferences() {
     var = user's uppercase character confirmation
     var = user's lowercase character confirmation
 
+## NEED HELP ##
     check if user has chose at least one character group
 
+## MAKE AN OBJECT ## 
     var = user's password options 
   
 
     return passwordOptions
 }
 
+## NEED HELP WITH SCOPE ## CAN'T FIND MY INFORMATION FROM THE FIRST FUNCTION - HOW DO I PULL USERSELECTION OUT?
+
+## NEED HELP ##
 function generateRandomNumber(array) {
     var i = Math random logic to generate a random # we can use as an index
     var = array[i]
