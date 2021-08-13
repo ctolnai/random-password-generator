@@ -15,7 +15,7 @@ function askUserForPasswordPreferences() {
     var = user's uppercase character confirmation
     var = user's lowercase character confirmation
 
-## NEED HELP ##
+
     check if user has chose at least one character group
 
     var = user's password options 

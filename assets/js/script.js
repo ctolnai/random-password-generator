@@ -2,6 +2,11 @@ var specialCharacters = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", 
 var numericalCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 var uppercaseCharacters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var finalArray = []
+var finalString = []
+
+
+
 
 function askUserForPasswordPreferences() {
   var passwordLength = window.prompt("Chose a number between 8 and 128");
@@ -35,40 +40,50 @@ function askUserForPasswordPreferences() {
   console.log(userLowercaseCharacterConfirmation);
 
   var userSelection = {
-    length: passwordLength,
+    userlength: passwordLength,
     userSpecialCharacters: userSpecialCharacterConfirmation,
     userNumericalCharacters: userNumericalCharacterConfirmation,
     userUppercaseCharacters: userUppercaseCharacterConfirmation,
     userLowercaseCharacters: userLowercaseCharacterConfirmation,
   }
   if (userSelection.userSpecialCharacters === false && userSelection.userNumericalCharacters === false && userSelection.userUppercaseCharacters === false && userSelection.userLowercaseCharacters === false) {
-    window.alert ("You must chose at least one character in your password")
-      generatePassword()
-    
+    window.alert("You must chose at least one character in your password")
+    generatePassword()
 
-    }
 
-  return userSelection;
   }
 
+  return userSelection;
+}
 
+//create random numbers, with that pull into final string
 
 function generatePassword() {
   var userSelection = askUserForPasswordPreferences()
 
-  if(userSelection.userSpecialCharacters=== true)
-  finalArray=finalArray.concat(specialCharacters)
 
-  console.log(userSelection)
+  if (userSelection.userSpecialCharacters === true)
+    finalArray = finalArray.concat(specialCharacters)
 
-  // array of all potential characters:
-  // see notes starting on line 45 from psuedocode
+  if (userSelection.userNumericalCharacters === true)
+    finalArray = finalArray.concat(numericalCharacters)
+
+  if (userSelection.userUppercaseCharacters === true)
+    finalArray = finalArray.concat(uppercaseCharacters)
+
+  if (userSelection.userLowercaseCharacters === true)
+    finalArray = finalArray.concat(lowercaseCharacters)
+
+  console.log(finalArray)
+
+  for (var i = 0; i < parseInt(userSelection.userlength); i++) {
+    finalString = finalString + finalArray[Math.floor(Math.random() * finalArray.length)]
+  }
+
+
+  return finalString;
+
 }
-
-
-
-
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -93,9 +108,7 @@ generateBtn.addEventListener("click", writePassword);
 // // var characters = ["a", "b", "c",  ]
 // // var randomElements = characters[Math.floor(Math.random()*characters.length)]
 
-// for (var i = 0; i<numofcharacters; i++){
-//   finalString = finalString + characters[Math.floor(Math.random()*characters.length)]
-// }
+
 
 // for the final password - this goes in the for loop (up to total number chosen by the user)
-// finalString = finalString + characters[Math.floor(Math.random()*characters.length)]
+// finalString = finalString + characters[Math.floor(Math.random()*characters.length/adgsdagds
