@@ -40,29 +40,24 @@ function askUserForPasswordPreferences() {
     userNumericalCharacters: userNumericalCharacterConfirmation,
     userUppercaseCharacters: userUppercaseCharacterConfirmation,
     userLowercaseCharacters: userLowercaseCharacterConfirmation,
-
-
-    // This is where i'm trying to check if the user has chosen at least one character group
-    // while(userSpecialCharacterConfirmation <=0 || userNumericalCharacterConfirmation <=0 || userUppercaseCharacterConfirmation <=0 || userLowercaseCharacterConfirmation <=0){
-    //   window.prompt("You must chose at least one character in your password");
-
-  if (userSelection.userSpecialCharacters = false && userSelection.userNumericalCharacters == false && userSelection.userUppercaseCharacters == false && userSelection.userLowercaseCharacters) {
+  }
+  if (userSelection.userSpecialCharacters === false && userSelection.userNumericalCharacters === false && userSelection.userUppercaseCharacters === false && userSelection.userLowercaseCharacters === false) {
     window.alert ("You must chose at least one character in your password")
-    return
+      generatePassword()
+    
 
     }
 
-
+  return userSelection;
   }
 
-return userSelection;
-}
 
-// //trying to get random numnber generator to work
-//  function math.floor(math.random(userSelection.length)*10)
 
 function generatePassword() {
   var userSelection = askUserForPasswordPreferences()
+
+  if(userSelection.userSpecialCharacters=== true)
+  finalArray=finalArray.concat(specialCharacters)
 
   console.log(userSelection)
 
@@ -88,3 +83,19 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
+
+// random elements
+// // var characters = ["a", "b", "c",  ]
+// // var randomElements = characters[Math.floor(Math.random()*characters.length)]
+
+// for (var i = 0; i<numofcharacters; i++){
+//   finalString = finalString + characters[Math.floor(Math.random()*characters.length)]
+// }
+
+// for the final password - this goes in the for loop (up to total number chosen by the user)
+// finalString = finalString + characters[Math.floor(Math.random()*characters.length)]
