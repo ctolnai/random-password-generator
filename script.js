@@ -54,24 +54,19 @@ function askUserForPasswordPreferences() {
 return userSelection;
 }
 
-
-
 // //trying to get random numnber generator to work
 //  function math.floor(math.random(userSelection.length)*10)
 
 function generatePassword(){
   var userSelection = askUserForPasswordPreferences()
 
-  var potentialSpecialCharacters = specialCharacters.length * userSpecialCharacters [null];
+console.log(userSelection)
+
+// array of all potential characters:
+// see notes starting on line 45 from psuedocode
+}
 
 
- console.log(userSelection)
- console.log(userSelection.userSpecialCharacters)
-
-//   if (userSpecialCharacters === true){
-//     concat 
-//   }
-// }
 
 
 
