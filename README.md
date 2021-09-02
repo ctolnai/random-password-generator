@@ -1,4 +1,4 @@
-# random-password-generator
+# random-password-generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This is a prompt that generates random passwords:
 
 ## github repo: https://github.com/ctolnai/random-password-generator
