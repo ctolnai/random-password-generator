@@ -7,3 +7,9 @@ This is a prompt that generates random passwords:
 
 Screenshot:
  <img src= "assets/images/screenshot.png">
+
+ ## License and copyright
+
+(c) Chris Tolnai 
+
+Licensed under the [MIT License](LICENSE).
